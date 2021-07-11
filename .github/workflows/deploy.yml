@@ -29,5 +29,5 @@ jobs:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: testdeploy
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:22 .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:22
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY
